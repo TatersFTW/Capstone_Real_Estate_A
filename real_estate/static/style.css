@@ -1,40 +1,148 @@
 body {
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 20px;
-          background-color: #f4f4f4;
-      }
-      .container {
-          max-width: 1200px;
-          margin: auto;
-      }
-      h1, h2 {
-          text-align: center;
-      }
-      button {
-          padding: 10px;
-          margin: 5px;
-          cursor: pointer;
-      }
-      .property-list, .profile-list {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-          gap: 20px;
-      }
-      .property, .profile {
-          background: white;
-          padding: 20px;
-          border-radius: 5px;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      }
-      .form-container {
-          background: white;
-          padding: 20px;
-          margin-top: 20px;
-          border-radius: 5px;
-      }
-      input, select, textarea {
-          width: 100%;
-          padding: 10px;
-          margin: 10px 0;
-      }
+       font-family: 'Poppins', sans-serif;
+       margin: 0;
+       padding: 0;
+       background-color: #f4f4f4;
+   }
+   .container {
+       max-width: 1200px;
+       margin: auto;
+       padding: 20px;
+       min-height: calc(100vh - 80px);
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       padding-top: 10px;
+   }
+   nav {
+       background: #076506;
+       padding: 15px 20px;
+       display: flex;
+       align-items: center;
+   }
+   .nav-logo {
+       margin-right: 20px;
+   }
+   .logo {
+       height: 50px;
+       width: auto;
+   }
+   nav ul {
+       list-style: none;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       align-items: center;
+       flex-grow: 1;
+   }
+   nav ul li {
+       margin-right: 20px;
+   }
+   nav ul li a {
+       color: white;
+       text-decoration: none;
+       padding: 12px;
+       font-size: 18px;
+   }
+   nav ul li a:hover {
+       background: #054504;
+       border-radius: 5px;
+   }
+   .auth-right {
+       margin-left: auto;
+       display: flex;
+       gap: 10px;
+   }
+   .home-content {
+       display: flex;
+       align-items: center;
+       gap: 80px; /* Increased gap */
+       margin-top: 20px;
+       position: relative;
+   }
+   .home-content.triangle-background::before {
+       content: '';
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 250%; /* Changed to 250% */
+       height: 100vh;
+       background: #21490A;
+       clip-path: polygon(0 0, 45% 0, 0 100%);
+       z-index: -1;
+       box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+   }
+   .home-left {
+       flex: 1;
+   }
+   .home-text {
+       color: white;
+       text-align: left;
+   }
+   .brand-text {
+       color: #EAAA00;
+       text-align: left;
+       font-size: 2.5rem;
+       margin-bottom: 10px;
+   }
+   .home-right {
+       flex: 1;
+       text-align: left; /* Changed to left-align button */
+   }
+   .home-image {
+       width: 100%;
+       height: 600px;
+       object-fit: cover;
+       border-radius: 5px;
+       margin-bottom: 20px;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   }
+   .cta-button {
+       padding: 15px 30px;
+       background: #EAAA00;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+       font-size: 16px;
+   }
+   .cta-button:hover {
+       background: #d19400;
+   }
+   h1, h2 {
+       text-align: center;
+   }
+   button {
+       padding: 10px;
+       margin: 5px;
+       cursor: pointer;
+   }
+   .property-list, .profile-list {
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+       gap: 20px;
+   }
+   .property, .profile {
+       background: white;
+       padding: 20px;
+       border-radius: 5px;
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
+   .form-container {
+       background: white;
+       padding: 20px;
+       margin-top: 20px;
+       border-radius: 5px;
+   }
+   input, select, textarea {
+       width: 100%;
+       padding: 10px;
+       margin: 10px 0;
+   }
+   .login-form, .register-form {
+       max-width: 400px;
+       margin: 20px auto;
+       background: white;
+       padding: 20px;
+       border-radius: 5px;
+   }

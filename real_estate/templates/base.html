@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>{% block title %}Real Estate Management System{% endblock %}</title>
+       <link rel="stylesheet" href="/static/style.css">
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+   </head>
+   <body>
+       <nav>
+           <div class="nav-logo">
+               <!-- Replace 'logo.png' with your custom logo, e.g., '/static/images/your-logo.png'. Ensure the logo file is placed in the 'static/images' directory. -->
+               <img src="/static/images/logo.png" alt="Real Estate Logo" class="logo">
+           </div>
+           <ul>
+               <li><a href="/">Home</a></li>
+               <li><a href="/about/">About Us</a></li>
+               <li><a href="/properties/">Properties</a></li>
+               <li><a href="/contact/">Contact Us</a></li>
+               <li id="auth-links" class="auth-right"></li>
+           </ul>
+       </nav>
+       <div class="container">
+           {% block content %}
+           {% endblock %}
+       </div>
+       <script src="/static/script.js"></script>
+   </body>
+   </html>

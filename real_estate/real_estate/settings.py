@@ -32,13 +32,14 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
          'django.contrib.admin',
-          'django.contrib.auth',
-          'django.contrib.contenttypes',
-          'django.contrib.sessions',
-          'django.contrib.messages',
-          'django.contrib.staticfiles',
-          'rest_framework',
-          'properties.apps.PropertiesConfig',
+       'django.contrib.auth',
+       'django.contrib.contenttypes',
+       'django.contrib.sessions',
+       'django.contrib.messages',
+       'django.contrib.staticfiles',
+       'rest_framework',
+       'rest_framework_simplejwt',
+       'properties.apps.PropertiesConfig',
      ]
 
 MIDDLEWARE = [
@@ -56,14 +57,14 @@ ROOT_URLCONF = 'real_estate.urls'
 TEMPLATES = [
     {
               'BACKEND': 'django.template.backends.django.DjangoTemplates',
-              'DIRS': [BASE_DIR / 'templates'],
-              'APP_DIRS': True,
-              'OPTIONS': {
-                  'context_processors': [
-                      'django.template.context_processors.debug',
-                      'django.template.context_processors.request',
-                      'django.contrib.auth.context_processors.auth',
-                      'django.contrib.messages.context_processors.messages',
+           'DIRS': [BASE_DIR / 'templates'],
+           'APP_DIRS': True,
+           'OPTIONS': {
+               'context_processors': [
+                   'django.template.context_processors.debug',
+                   'django.template.context_processors.request',
+                   'django.contrib.auth.context_processors.auth',
+                   'django.contrib.messages.context_processors.messages',
                   ],
               },
           },
@@ -124,3 +125,9 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+       'DEFAULT_AUTHENTICATION_CLASSES': [
+           'rest_framework_simplejwt.authentication.JWTAuthentication',
+       ],
+   }

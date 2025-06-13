@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-      <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Real Estate Management System</title>
-          <link rel="stylesheet" href="/static/style.css">
-      </head>
-      <body>
-          <div class="container">
-              <h1>Real Estate Management System</h1>
-              <div id="user-type">
-                  <button onclick="setUserType('client')">Client</button>
-                  <button onclick="setUserType('agent')">Agent</button>
-                  <button onclick="setUserType('broker')">Broker</button>
-              </div>
-              <div id="content"></div>
-          </div>
-          <script src="/static/script.js"></script>
-      </body>
-      </html>
+{% extends 'base.html' %}
+   {% block title %}Home - Real Estate Management{% endblock %}
+   {% block content %}
+   <div class="home-content triangle-background">
+       <div class="home-left">
+           <h1 class="brand-text">L.C. Arabe Realty</h1>
+           <h1 class="home-text">Welcome to Our Real Estate</h1>
+           <p class="home-text">Discover your dream home with us. We offer a wide range of properties tailored to your needs, backed by exceptional service and expertise.</p>
+       </div>
+       <div class="home-right">
+           <!-- Replace 'placeholder.jpg' with your custom image, e.g., '/static/images/your-image.jpg'. Ensure the image file is placed in the 'static/images' directory and run 'python manage.py collectstatic' if needed. -->
+           <img src="/static/images/placeholder.png" alt="Real Estate Property" class="home-image">
+           <button id="book-now" class="cta-button">BOOK NOW!</button>
+       </div>
+   </div>
+   {% endblock %}
