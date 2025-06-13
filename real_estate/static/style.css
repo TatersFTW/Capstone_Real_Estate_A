@@ -56,7 +56,7 @@ body {
    .home-content {
        display: flex;
        align-items: center;
-       gap: 80px; /* Increased gap */
+       gap: 120px;
        margin-top: 20px;
        position: relative;
    }
@@ -65,12 +65,12 @@ body {
        position: fixed;
        top: 0;
        left: 0;
-       width: 250%; /* Changed to 250% */
+       width: 250%;
        height: 100vh;
        background: #21490A;
        clip-path: polygon(0 0, 45% 0, 0 100%);
        z-index: -1;
-       box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+       box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
    }
    .home-left {
        flex: 1;
@@ -79,35 +79,93 @@ body {
        color: white;
        text-align: left;
    }
+   .home-text h1 {
+       font-size: 2.8rem;
+   }
+   .home-text p {
+       font-size: 1.4rem;
+   }
    .brand-text {
        color: #EAAA00;
        text-align: left;
-       font-size: 2.5rem;
+       font-size: 3.2rem;
        margin-bottom: 10px;
    }
    .home-right {
        flex: 1;
-       text-align: left; /* Changed to left-align button */
+       text-align: right; /* Changed to right-align button */
+   }
+   .carousel {
+       position: relative;
+       width: 100%;
+       overflow: hidden;
+       margin-bottom: 20px;
+       margin-top: 40px;
+   }
+   .carousel-inner {
+       display: flex;
+       transition: transform 0.5s ease-in-out;
+   }
+   .carousel-item {
+       flex: 0 0 100%;
    }
    .home-image {
        width: 100%;
        height: 600px;
        object-fit: cover;
        border-radius: 5px;
-       margin-bottom: 20px;
-       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+   }
+   .carousel-control {
+       position: absolute;
+       top: 50%;
+       transform: translateY(-50%);
+       background: rgba(0, 0, 0, 0.5);
+       color: white;
+       border: none;
+       padding: 10px;
+       cursor: pointer;
+       font-size: 18px;
+   }
+   .carousel-control.prev {
+       left: 10px;
+   }
+   .carousel-control.next {
+       right: 10px;
    }
    .cta-button {
        padding: 15px 30px;
        background: #EAAA00;
-       color: white;
+       color: #000000;
        border: none;
        border-radius: 5px;
        cursor: pointer;
        font-size: 16px;
+       font-weight: bold;
    }
    .cta-button:hover {
        background: #d19400;
+   }
+   .social-button {
+       display: inline-flex;
+       align-items: center;
+       padding: 10px 20px;
+       margin-top: 10px;
+       border-radius: 5px;
+       text-decoration: none;
+       font-size: 16px;
+   }
+   .facebook-button {
+       background: #3b5998;
+       color: white;
+   }
+   .facebook-icon {
+       display: inline-block;
+       width: 20px;
+       height: 20px;
+       margin-right: 10px;
+       text-align: center;
+       font-weight: bold;
    }
    h1, h2 {
        text-align: center;

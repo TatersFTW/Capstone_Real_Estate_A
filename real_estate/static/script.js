@@ -1,6 +1,7 @@
 let userType = 'guest';
    let token = localStorage.getItem('token');
    const apiBaseUrl = 'http://127.0.0.1:8000/api/';
+   let currentSlide = 0;
 
    function updateAuthLinks() {
        const authLinks = document.getElementById('auth-links');
@@ -251,6 +252,15 @@ let userType = 'guest';
            headers: { 'Authorization': `Bearer ${token}` }
        });
        loadContent();
+   }
+
+   // Carousel functionality
+   function changeSlide(direction) {
+       const slides = document.querySelectorAll('.carousel-item');
+       const totalSlides = slides.length;
+       currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+       const carouselInner = document.querySelector('.carousel-inner');
+       carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
    }
 
    // Initial setup

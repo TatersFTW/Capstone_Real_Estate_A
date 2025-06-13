@@ -5,11 +5,28 @@
        <div class="home-left">
            <h1 class="brand-text">L.C. Arabe Realty</h1>
            <h1 class="home-text">Welcome to Our Real Estate</h1>
-           <p class="home-text">Discover your dream home with us. We offer a wide range of properties tailored to your needs, backed by exceptional service and expertise.</p>
+           <p class="home-text">Offering House & Lot, Lot only, Condominium and Memorial Park that are fit for your lifestyle and priority in life</p>
+           <a href="https://www.facebook.com/profile.php?id=100064045423114" target="_blank" class="social-button facebook-button">
+               <span class="facebook-icon">f</span> Follow us on Facebook
+           </a>
        </div>
        <div class="home-right">
-           <!-- Replace 'placeholder.jpg' with your custom image, e.g., '/static/images/your-image.jpg'. Ensure the image file is placed in the 'static/images' directory and run 'python manage.py collectstatic' if needed. -->
-           <img src="/static/images/placeholder.png" alt="Real Estate Property" class="home-image">
+           <!-- Replace the src attributes with your custom images, e.g., '/static/images/your-image1.jpg'. Ensure images are placed in the 'static/images' directory and run 'python manage.py collectstatic' if needed. -->
+           <div class="carousel">
+               <div class="carousel-inner">
+                   <div class="carousel-item active">
+                       <img src="/static/images/placeholder.png" alt="Real Estate Property 1" class="home-image">
+                   </div>
+                   <div class="carousel-item">
+                       <img src="/static/images/placeholder2.jpg" alt="Real Estate Property 2" class="home-image">
+                   </div>
+                   <div class="carousel-item">
+                       <img src="/static/images/placeholder3.jpg" alt="Real Estate Property 3" class="home-image">
+                   </div>
+               </div>
+               <button class="carousel-control prev" onclick="changeSlide(-1)">&#10094;</button>
+               <button class="carousel-control next" onclick="changeSlide(1)">&#10095;</button>
+           </div>
            <button id="book-now" class="cta-button">BOOK NOW!</button>
        </div>
    </div>
