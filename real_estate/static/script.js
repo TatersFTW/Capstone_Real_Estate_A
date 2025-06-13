@@ -216,7 +216,7 @@ let userType = 'guest';
            price: document.getElementById('price').value,
            address: document.getElementById('address').value,
            property_type: document.getElementById('property-type').value,
-           agent: 1 // Replace with authenticated agent ID
+           agent: 1
        };
        await fetch(apiBaseUrl + 'properties/', {
            method: 'POST',
@@ -231,7 +231,7 @@ let userType = 'guest';
 
    async function bookProperty(propertyId) {
        const booking = {
-           client: 1, // Replace with authenticated client ID
+           client: 1,
            property: propertyId,
            status: 'pending'
        };
@@ -263,6 +263,20 @@ let userType = 'guest';
        carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
    }
 
+   // Footer visibility on scroll
+   function toggleFooterVisibility() {
+       const footer = document.querySelector('.site-footer');
+       const scrollPosition = window.innerHeight + window.scrollY;
+       const documentHeight = document.documentElement.scrollHeight;
+
+       if (scrollPosition >= documentHeight - 10) {
+           footer.classList.add('visible');
+       } else {
+           footer.classList.remove('visible');
+       }
+   }
+
    // Initial setup
    updateAuthLinks();
    checkUserType().then(loadContent);
+   window.addEventListener('scroll', toggleFooterVisibility);

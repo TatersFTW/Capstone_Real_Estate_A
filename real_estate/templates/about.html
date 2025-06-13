@@ -1,6 +1,34 @@
 {% extends 'base.html' %}
-     {% block title %}About Us{% endblock %}
-     {% block content %}
-     <h1>About Us</h1>
-     <p>We are a leading real estate platform connecting clients with properties.</p>
-     {% endblock %}
+   {% block title %}About Us - Real Estate Management{% endblock %}
+   {% block content %}
+   <div class="about-content">
+       <h1 class="about-title">About Us</h1>
+       <div class="image-gallery">
+           <!-- Replace the src attributes with your custom images, e.g., '/static/images/your-image1.jpg'. Ensure images are placed in the 'static/images' directory and run 'python manage.py collectstatic' if needed. -->
+           <img src="/static/images/placeholder.png" alt="About Image 1" class="gallery-image fade-in">
+           <img src="/static/images/placeholder2.jpg" alt="About Image 2" class="gallery-image fade-in">
+           <img src="/static/images/placeholder3.jpg" alt="About Image 3" class="gallery-image fade-in">
+       </div>
+       <div class="content-section">
+           <div class="content-text">
+               <h2>Our Mission</h2>
+               <p>At L.C. Arabe Realty, we are dedicated to helping you find the perfect property that aligns with your lifestyle and aspirations. Our team of experienced professionals is committed to providing exceptional service and personalized guidance.</p>
+           </div>
+           <div class="content-image">
+               <!-- Replace the src attribute with your custom image, e.g., '/static/images/mission-image.jpg'. -->
+               <img src="/static/images/placeholder2.jpg" alt="Our Mission" class="section-image fade-in">
+           </div>
+       </div>
+       <div class="content-section">
+           
+           <div class="content-image">
+               <!-- Replace the src attribute with your custom image, e.g., '/static/images/vision-image.jpg'. -->
+               <img src="/static/images/placeholder3.jpg" alt="Our Vision" class="section-image fade-in">
+           </div>
+           <div class="content-text">
+               <h2>Our Vision</h2>
+               <p>We envision a world where finding your dream home is a seamless and joyful experience. L.C. Arabe Realty strives to be the trusted leader in real estate by offering innovative solutions and a wide range of properties, from cozy homes to expansive lots.</p>
+           </div>
+       </div>
+   </div>
+   {% endblock %}
